@@ -153,4 +153,15 @@ footer {
       width: 100%;
     }
   }
+  footer {
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo transparente */
+    color: #333; /* Color de texto */
+    text-align: center; /* Alineación del texto */
+    padding: 5px 0; /* Espaciado interno */
+  }
+  
+  .copyright {
+    display: flex; /* Utilizamos flexbox para centrar verticalmente el texto */
+    justify-content: center; /* Centramos horizontalmente el texto */
+  }
 }
