@@ -1,178 +1,156 @@
-/* Variables */
-$color-azul-oscuro: #0d5bc1;
-$color-azul-claro: #add8e6;
-$color-naranja: #ff8c00;
-$color-blanco: #fff;
-$color-negro: #333;
-$color-gris: #ccc;
-$color-transparencia: rgba(13, 73, 193, 0.3);
+@charset "UTF-8";
 
-/* Estilos generales */
+// Variables
+$primary-color: #0d5bc1;
+$secondary-color: #fff;
+$accent-color: #ff8c00;
+
+// Estilos generales
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: $color-blanco;
-    color: $color-negro;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $secondary-color;
+  color: #333;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 header {
-    background-color: $color-azul-oscuro;
-    padding: 20px 0;
-    color: $color-blanco;
+  background-color: $primary-color;
+  padding: 20px 0;
+  color: $secondary-color;
 }
 
 .navbar {
-    background-color: $color-azul-claro;
+  background-color: #add8e6;
 }
 
 .nav-links a {
-    color: $color-blanco;
+  color: $secondary-color;
 }
 
 .nav-links a:hover {
-    color: $color-naranja;
+  color: $accent-color;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-.logo img {
+  .logo img {
     max-width: 50px;
-}
+  }
 
-.nav-links li {
+  .nav-links li {
     display: inline-block;
     margin-left: 20px;
-}
+  }
 
-.nav-links a {
+  .nav-links a {
     text-decoration: none;
-    color: $color-blanco;
+    color: $secondary-color;
     font-weight: bold;
     transition: color 0.3s ease;
-}
 
-.nav-links a:hover {
-    color: $color-naranja;
+    &:hover {
+      color: $accent-color;
+    }
+  }
 }
 
 section {
-    padding: 40px 0;
-}
+  padding: 40px 0;
 
-h2 {
-    color: $color-azul-oscuro;
-}
+  h2 {
+    color: $primary-color;
+  }
 
-.services ul {
+  .services ul {
     list-style: none;
     padding: 0;
-}
 
-.services ul li {
-    margin-bottom: 10px;
-}
+    li {
+      margin-bottom: 10px;
+    }
+  }
 
-.contact form {
+  .contact form {
     max-width: 600px;
     margin: auto;
-}
 
-.form-control {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid $color-gris;
-    border-radius: 5px;
-}
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
-.btn {
-    display: inline-block;
-    background-color: $color-azul-oscuro;
-    color: $color-blanco;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+    .btn {
+      background-color: $primary-color;
+      color: $secondary-color;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
 
-.btn:hover {
-    background-color: $color-naranja;
+      &:hover {
+        background-color: $accent-color;
+      }
+    }
+  }
 }
 
 footer {
-    background-color: $color-transparencia;
-    color: $color-blanco;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 999;
-    font-size: 12px;
+  background-color: rgba(13, 73, 193, 0.3);
+  color: $secondary-color;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+  font-size: 12px;
 }
 
-/* Estilos para dispositivos móviles */
+// Estilos para dispositivos móviles
 @media (max-width: 768px) {
-    .nav-links {
-        text-align: center;
-        margin-top: 20px;
-    }
+  header {
+    padding: 10px 0;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-links a {
+    margin: 10px 0;
+  }
+  .logo img {
+    max-width: 80px;
+  }
+  section {
+    padding: 20px 0;
+  }
+  .services ul li {
+    text-align: left;
+    padding-left: 0;
+    margin-left: 20px;
+  }
+  .services ul li:before {
+    content: "";
+  }
+  .contact form {
+    max-width: 100%;
 
-    .nav-links li {
-        display: block;
-        margin: 10px 0;
+    .form-control {
+      width: 100%;
     }
-
-    .logo img {
-        max-width: 120px;
-    }
-
-    .services ul {
-        padding-left: 0;
-    }
-
-    .services ul li {
-        margin-bottom: 10px;
-        padding-left: 20px;
-        position: relative;
-    }
-
-    .services ul li:before {
-        content: "\2022";
-        color: $color-azul-oscuro;
-        font-weight: bold;
-        display: inline-block;
-        width: 1em;
-        position: absolute;
-        left: 0;
-        top: 0.3em;
-    }
-
-    .contact form {
-        max-width: 100%;
-    }
-
-    footer {
-        padding: 5px 0;
-    }
-
-    section {
-        padding: 20px 0;
-    }
-
-    .map iframe {
-        width: 100%;
-        height: 300px;
-    }
+  }
 }
