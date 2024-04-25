@@ -1,170 +1,164 @@
+@charset "UTF-8";
+/* Variables */
 /* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #e2e2e2; /* Fondo blanco suave */
-    color: #333; /* Texto negro */
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
+  width: 80%;
+  margin: auto;
 }
 
 header {
-    background-color: #0d5bc1; /* Azul oscuro */
-    padding: 20px 0;
+  background-color: #0d5bc1;
+  padding: 20px 0;
+  color: #fff;
 }
-header, .navbar {
-    color: #fff; /* Texto blanco */
-    
+
+.navbar {
+  background-color: #add8e6;
 }
 
 .nav-links a {
-    color: #fff; /* Enlaces blancos */
+  color: #fff;
 }
 
 .nav-links a:hover {
-    color: #ff8c00; /* Color de enlace al pasar el mouse */
+  color: #ff8c00;
 }
+
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo img {
-    max-width: 50px; /* Tamaño máximo del logo */
+  max-width: 50px;
 }
 
 .nav-links li {
-    display: inline-block;
-    margin-left: 20px; /* Espacio entre elementos del navbar */
+  display: inline-block;
+  margin-left: 20px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #fcfcfcee;
-    font-weight: bold;
-    transition: color 0.3s ease; /* Efecto de transición para el color */
-}
-.navbar {
-    background-color: #add8e6; /* Azul claro */
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #ff8c00; /* Cambia el color del enlace al pasar el mouse */
+  color: #ff8c00;
 }
 
-/* Estilos para las secciones */
 section {
-    padding: 40px 0;
+  padding: 40px 0;
 }
 
 h2 {
-    color: #0d79c1; /* Azul oscuro */
+  color: #0d5bc1;
 }
 
 .services ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .services ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .contact form {
-    max-width: 600px;
-    margin: auto;
+  max-width: 600px;
+  margin: auto;
 }
 
 .form-control {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .btn {
-    display: inline-block;
-    background-color: #0d49c1; /* Azul oscuro */
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  background-color: #0d5bc1;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #ff8c00; /* Naranja */
+  background-color: #ff8c00;
 }
 
 footer {
-    background-color: rgba(13, 73, 193, 0.3); /* Azul oscuro con transparencia */
-    color: #fff; /* Texto blanco */
-    text-align: center;
-    padding: 10px 0; /* Reducir el espacio interno de la barra de pie de página */
-    position: fixed; /* Mantener la barra de pie de página fija en la parte inferior */
-    bottom: 0;
-    width: 100%;
-    z-index: 999; /* Asegurar que esté por encima de otros elementos */
-    font-size: 12px; /* Reducir el tamaño de fuente */
+  background-color: rgba(13, 73, 193, 0.3);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+  font-size: 12px;
 }
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-    .nav-links {
-        text-align: center; /* Centra los enlaces del navbar */
-        margin-top: 20px; /* Espacio superior en dispositivos móviles */
-    }
-
-    .nav-links li {
-        display: block; /* Convierte los elementos de la lista en bloques */
-        margin: 10px 0; /* Espacio vertical entre elementos del navbar */
-    }
-
-    .logo img {
-        max-width: 120px; /* Reduzco el tamaño del logo en dispositivos móviles */
-    }
-
-    .services ul {
-        padding-left: 0; /* Elimina el relleno izquierdo de la lista */
-    }
-
-    .services ul li {
-        margin-bottom: 10px;
-        padding-left: 20px; /* Agrega relleno a la izquierda para los elementos de la lista */
-        position: relative; /* Posición relativa para los elementos de la lista */
-    }
-
-    .services ul li:before {
-        content: "\2022"; /* Agrega un punto como marcador de lista */
-        color: #0d49c1; /* Color del marcador */
-        font-weight: bold;
-        display: inline-block;
-        width: 1em;
-        position: absolute;
-        left: 0; /* Posición a la izquierda del elemento de la lista */
-        top: 0.3em; /* Alineación vertical */
-    }
-
-    .contact form {
-        max-width: 100%; /* Ancho máximo del formulario en dispositivos móviles */
-    }
-
-    footer {
-        padding: 5px 0; /* Reducir aún más el espacio interno en dispositivos móviles */
-    }
-    section {
-        padding: 20px 0; /* Reduce el relleno superior e inferior de las secciones */
-    }
-
-    .map iframe {
-        width: 100%; /* Ancho del mapa al 100% en dispositivos móviles */
-        height: 300px; /* Altura fija del mapa */
-    }
+  .nav-links {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .nav-links li {
+    display: block;
+    margin: 10px 0;
+  }
+  .logo img {
+    max-width: 120px;
+  }
+  .services ul {
+    padding-left: 0;
+  }
+  .services ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+  }
+  .services ul li:before {
+    content: "•";
+    color: #0d5bc1;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    position: absolute;
+    left: 0;
+    top: 0.3em;
+  }
+  .contact form {
+    max-width: 100%;
+  }
+  footer {
+    padding: 5px 0;
+  }
+  section {
+    padding: 20px 0;
+  }
+  .map iframe {
+    width: 100%;
+    height: 300px;
+  }
 }
+
+/*# sourceMappingURL=styles.css.map */

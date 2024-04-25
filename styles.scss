@@ -1,0 +1,178 @@
+/* Variables */
+$color-azul-oscuro: #0d5bc1;
+$color-azul-claro: #add8e6;
+$color-naranja: #ff8c00;
+$color-blanco: #fff;
+$color-negro: #333;
+$color-gris: #ccc;
+$color-transparencia: rgba(13, 73, 193, 0.3);
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $color-blanco;
+    color: $color-negro;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    background-color: $color-azul-oscuro;
+    padding: 20px 0;
+    color: $color-blanco;
+}
+
+.navbar {
+    background-color: $color-azul-claro;
+}
+
+.nav-links a {
+    color: $color-blanco;
+}
+
+.nav-links a:hover {
+    color: $color-naranja;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 50px;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: $color-blanco;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: $color-naranja;
+}
+
+section {
+    padding: 40px 0;
+}
+
+h2 {
+    color: $color-azul-oscuro;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services ul li {
+    margin-bottom: 10px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid $color-gris;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: $color-azul-oscuro;
+    color: $color-blanco;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: $color-naranja;
+}
+
+footer {
+    background-color: $color-transparencia;
+    color: $color-blanco;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    font-size: 12px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-links {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .logo img {
+        max-width: 120px;
+    }
+
+    .services ul {
+        padding-left: 0;
+    }
+
+    .services ul li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .services ul li:before {
+        content: "\2022";
+        color: $color-azul-oscuro;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        position: absolute;
+        left: 0;
+        top: 0.3em;
+    }
+
+    .contact form {
+        max-width: 100%;
+    }
+
+    footer {
+        padding: 5px 0;
+    }
+
+    section {
+        padding: 20px 0;
+    }
+
+    .map iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
